@@ -1,0 +1,28 @@
+apiVersion: k8s.cni.cncf.io/v1
+kind: NetworkAttachmentDefinition
+metadata:
+  name: lab4-dataplane
+  namespace: lab4
+spec:
+  config: |
+    {
+      "cniVersion": "0.4.0",
+      "name": "lab4-dataplane",
+      "type": "bridge",
+      "bridge": "br-dataplane",
+      "isGateway": true,
+      "ipMasq": false,
+      "hairpinMode": true,
+      "ipam": {
+        "type": "host-local",
+        "ranges": [[{
+          "subnet": "172.30.10.0/24",
+          "rangeStart": "172.30.10.20",
+          "rangeEnd": "172.30.10.220",
+          "gateway": "172.30.10.1"
+        }]],
+        "routes": [
+          {"dst": "172.30.10.0/24"}
+        ]
+      }
+    }

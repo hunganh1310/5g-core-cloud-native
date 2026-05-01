@@ -1,0 +1,6 @@
+The dummy UPF deployment is ready.
+
+Useful commands:
+  kubectl get pods -n {{ .Release.Namespace }} -o wide
+  kubectl get pod -n {{ .Release.Namespace }} -l app.kubernetes.io/name=dummy-upf -o jsonpath='{range .items[*]}{.metadata.annotations.k8s\.v1\.cni\.cncf\.io/network-status}{"\n"}{end}'
+  kubectl port-forward -n {{ .Release.Namespace }} svc/{{ include "dummy-upf-chart.fullname" . }} 8080:{{ .Values.service.port }}

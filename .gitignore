@@ -1,0 +1,35 @@
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Go
+bin/
+*.test
+coverage.out
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Helm / Kubernetes
+*.tgz
+charts/*/charts/
+charts/*/tmp/
+*.lock
+
+# Build artifacts
+dist/
+build/
+out/
+*.exe
+*.out
+*.log
