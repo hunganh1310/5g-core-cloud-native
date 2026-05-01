@@ -1,4 +1,4 @@
-#5G Core Cloud-Native Infrastructure
+# 5G Core Cloud-Native Infrastructure
 
 ![lab-badge](https://img.shields.io/badge/lab-5G%20Core-blue) ![python-badge](https://img.shields.io/badge/python-3.12-blue?logo=python) ![wsl2-badge](https://img.shields.io/badge/WSL2-required-4A86E8) ![docker-badge](https://img.shields.io/badge/docker-required-2496ED?logo=docker) ![k3d-badge](https://img.shields.io/badge/k3d-recommended-2b90d9)
 
